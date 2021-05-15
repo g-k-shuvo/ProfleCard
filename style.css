@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  background: linear-gradient(to right, #203a43, #0f2027);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.228);
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  border-radius: 23px;
+  align-items: center;
+  flex-direction: column;
+  color: #d8d6d6;
+}
+
+.card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card .info {
+  margin: 1rem 0;
+}
+
+.card .username {
+  font-size: 2rem;
+  margin-bottom: 0.2rem;
+  font-weight: 700;
+}
+
+.card .bio {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.arrow-container,
+.cancel-container {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: white;
+  bottom: 0;
+  right: 0;
+  border-radius: 23px 0 23px 0;
+  font-size: 1.6rem;
+  transition: all 0.4s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.arrow-container i {
+  transform: rotate(45deg);
+}
+
+.active-arrow {
+  translate: (80%, 80%);
+}
+
+.hidden-container {
+  position: absolute;
+  background: #0f2027;
+  width: 100%;
+  height: 100%;
+  transition: all 0.4s;
+  border-radius: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.off {
+  transform: translate(-85%, -85%) rotate(90deg);
+}
+
+.active {
+  transform: translate(0) rotate(0);
+}
+
+.hidden-container h3 {
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.skills {
+  margin: 0.6rem;
+}
+
+.hidden-container .skills span {
+  display: inline-block;
+  color: #cfcfcf;
+  border: 1px solid #dddddd;
+  padding: 5px 10px;
+  font-size: 0.8rem;
+  margin: 0.4rem 0.2rem;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
+.hidden-container .skills span:hover {
+  background: #203a43;
+}
+
+.hidden-container .socials {
+  font-size: 1.4rem;
+}
+
+.hidden-container .socials i {
+  color: #cfcfcf;
+  cursor: pointer;
+  margin: 0 0.6rem;
+  transition: all 0.4s;
+}
+
+.hidden-container .socials i:hover {
+  color: #2c5364;
+}
